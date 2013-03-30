@@ -8,7 +8,7 @@ module.exports = {
       /* Ignore paths that are not intented to be secure */
       var shouldBeSecured = false;
       for (var i in properties.SECURED_URL_MATCHERS){
-        var matched = req.href.match( properties.SECURED_URL_MATCHERS[i] );
+        var matched = req.href().match( properties.SECURED_URL_MATCHERS[i] );
         if(matched != null){
           shouldBeSecured = true;
           break;
@@ -16,11 +16,11 @@ module.exports = {
       }
 
       if( !shouldBeSecured ){
-        console.log("@authenticationFilter: ignoring " + req.href);
+        console.log("@authenticationFilter: ignoring " + req.href());
         return next();
       }
 
-      console.log("@authenticationFilter: processing " + req.href);
+      console.log("@authenticationFilter: processing " + req.href());
 
       switch (req.method) {
       case "POST":
