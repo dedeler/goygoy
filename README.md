@@ -1,4 +1,8 @@
-goygoy
-======
+Goygoycu muyuz? 
+===============
 
-goy goy goy...
+Sizin için hesapladık!
+
+Licanse
+=======
+GPLv3
