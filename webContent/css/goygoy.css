@@ -1,0 +1,27 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.centered{
+  text-align: center;
+}
+
+.lead{
+  padding-top: 10px;
+}
+
+.justified{
+  text-align: justify;
+}
+
+input[class=input-xlarge] {
+  height: 1.5em;
+  font-size: 1.5em;
+  line-height: 29px;
+}
+
+.btn-large{
+  padding: 15px 20px;
+  font-size: 1.7em;
+}
