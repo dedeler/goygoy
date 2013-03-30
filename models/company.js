@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 
 var companySchema = new mongoose.Schema({
   name:  String,
-  departments: [{
+  roles: [{
   	name: String, 
   	point: { type: Number, default: 1 }
   }],
