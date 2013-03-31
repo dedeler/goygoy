@@ -116,67 +116,67 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Software architect',
-		point: 1
+		point: 16
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 1
+		point: 16
 	},
 	{
 		name: 'Analist',
-		point: 1
+		point: 17
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 20
 	},
 	{
 		name: 'Database admini',
-		point: 1
+		point: 17
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
+		point: 21
 	},
 	{
 		name: 'İş geliştirici',
-		point: 1
+		point: 13
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
-		point: 1
+		point: 12
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 22
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 22
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 22
 	}
 	]
 },
@@ -185,67 +185,67 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 11
 	},
 	{
 		name: 'Software architect',
-		point: 1
+		point: 16
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 1
+		point: 16
 	},
 	{
 		name: 'Analist',
-		point: 1
+		point: 17
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 20
 	},
 	{
 		name: 'Database admini',
-		point: 1
+		point: 17
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
+		point: 21
 	},
 	{
 		name: 'İş geliştirici',
-		point: 1
+		point: 13
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
-		point: 1
+		point: 12
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 22
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 22
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 22
 	}
 	]
 },
@@ -254,79 +254,75 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Software architect',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Analist',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Database admini',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
-	},
-	{
-		name: 'İş geliştirici',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 2
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Kurucu',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Kurucu ortak',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Patron',
-		point: 1
+		point: 5
 	},
 	]
 },
@@ -335,15 +331,15 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Software architect',
@@ -363,7 +359,7 @@ var companies = [
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'Database admini',
@@ -371,15 +367,15 @@ var companies = [
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'İş geliştirici',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 2
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
@@ -387,27 +383,27 @@ var companies = [
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Kurucu',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Kurucu ortak',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Patron',
-		point: 1
+		point: 7
 	},
 	]
 },
@@ -416,79 +412,79 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Software architect',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Analist',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Database admini',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'İş geliştirici',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 7
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Kurucu',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Kurucu ortak',
-		point: 1
+		point: 10
 	},
 	{
 		name: 'Patron',
-		point: 1
+		point: 10
 	},
 	]
 },
@@ -497,79 +493,79 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Software architect',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Analist',
-		point: 1
+		point: 0.5
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 4
 	},
 	{
 		name: 'Operasyon',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Database admini',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Proje yöneticisi',
-		point: 1
+		point: 8
 	},
 	{
 		name: 'İş geliştirici',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'İnsan kaynakları',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'Müşteri ilişkileri yöneticisi',
-		point: 1
+		point: 3
 	},
 	{
 		name: 'Genel müdür',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Direktör',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Koordinatör',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Kurucu',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Kurucu ortak',
-		point: 1
+		point: 5
 	},
 	{
 		name: 'Patron',
-		point: 1
+		point: 5
 	},
 	]
 },
@@ -1145,31 +1141,31 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Kurucu ortak',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Müdür',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Patron',
-		point: 1
+		point: 0
 	},
 	{
 		name: 'Sistem yöneticisi',
-		point: 1
+		point: 0
 	}
 	]
 },

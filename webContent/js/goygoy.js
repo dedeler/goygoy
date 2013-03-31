@@ -145,7 +145,8 @@ $(function() {
   });//end of submit click
 
   $('#back').click(function() {
-    $('input').val('');
+    $('input').val('').attr('readonly', 'true').attr('disabled', 'true');
+    $('#company').removeAttr('readonly').removeAttr('disabled');
     $('#resultContent').hide();
     $('#mainContent').show();
   });
