@@ -105,8 +105,8 @@ $(function() {
 
     //validation
     if( !data.hasOwnProperty('company') || !data.hasOwnProperty('job') || !data.hasOwnProperty('year')||
-        data.company.trim() == "" || data.job.trim() == "" || data.year.trim() == "" || 
-        !isFinite(data.year) || data.year < 0)
+      data.company.trim() == "" || data.job.trim() == "" || data.year.trim() == "" || 
+      !isFinite(data.year) || data.year < 0)
     {
       $('#validationErrorModal').modal('show');
       return;
@@ -130,7 +130,8 @@ $(function() {
           $('#resultContent').show();
         }
         else{
-
+          $('#alertMessage').text(response.message || "Everything is something happened!");
+          $('#alertModal').modal('show');
         }
         $('#submit').button('reset');
       },
@@ -158,7 +159,7 @@ $(function() {
     $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>');
 
     $('#job').change(function() {
-      
+
       if( jobNames.indexOf($(this).val()) > -1 ){
         $('#year').removeAttr('readonly');
         $('#year').removeAttr('disabled');
@@ -183,5 +184,14 @@ $(function() {
     }
     return false;
   }
+
+  $("form input").keypress(function (e) {
+    if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+      $('button[type=submit]').click();
+      return false;
+    } else {
+      return true;
+    }
+  });
 
 });

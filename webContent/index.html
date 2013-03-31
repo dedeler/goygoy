@@ -33,7 +33,7 @@
             <div id="mainContent">
               <form class="centered">
                 <div class="controls">
-                  <input class="input-xlarge" name="company" id="company" type="text" placeholder="Nerede çalışıyorsunuz" required readonly>
+                  <input class="input-xlarge" name="company" id="company" type="text" placeholder="Nerede çalışıyorsunuz" required readonly autofocus>
                 </div>
                 <div id="jobInputContainer" class="controls">
                   <input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>
@@ -42,7 +42,7 @@
                   <input class="input-xlarge" name="year" id="year" type="number" placeholder="Toplam tecrübe (yıl)" required readonly disabled>
                 </div>
               </form>
-              <div class="centered"><button id="submit" class="btn btn-large btn-primary" href="#" data-loading-text="Hesaplanıyor...">Hesapla bakalım</button></div>
+              <div class="centered"><button type="submit" id="submit" class="btn btn-large btn-primary" href="#" data-loading-text="Hesaplanıyor...">Hesapla bakalım</button></div>
             </div>
             <div id="resultContent">
               <legend>Sonuç</legend>
@@ -130,6 +130,15 @@
       </div>
       <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Hadi len ordan!</a>
+      </div>
+    </div>
+
+    <div id="alertModal" class="modal hide fade">
+      <div class="modal-body">
+        <p id="alertMessage"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Tamam</a>
       </div>
     </div>
   </body>

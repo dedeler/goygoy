@@ -63,7 +63,7 @@ module.exports = {
       var year = goygoy['year'];
       Company.findOne({name: company}, function(err, comp){
         if(err || comp==null) {
-          res.send({success: false, message: "calistiginiz sirket goygoy listesinde degil :("});
+          res.send({success: false, message: "Çalıştığınız şirket goygoy listesinde değil :("});
           return;
         }
 
@@ -84,7 +84,7 @@ module.exports = {
 
         Goygoy.findOne({minPoint: {$lte: goygoyPoint}}, 'message', {sort: {minPoint: -1}}, function(err, result){
           if(err || result==null) {
-            res.send({success: false, message: "goygoy mesaji bulunamadi"});
+            res.send({success: false, message: "Goygoy mesajı bulunamadı."});
             return;
           }
           res.send({
