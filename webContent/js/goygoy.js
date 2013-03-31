@@ -34,6 +34,7 @@ $.fn.serializeObject = function(){
 };
 
 $(function() {
+
   var companies;
 
   $.getJSON('api/companies', function(response){
@@ -65,6 +66,13 @@ $(function() {
     });
 
     $('#company').removeAttr('readonly');
+  });
+
+  $('#company').keyup(function() {
+    if($(this).val().trim() == ""){
+      $('#job').val('').attr('readonly', 'true');
+      $('#year').val('').attr('readonly', 'true');
+    }
   });
 
   $('#year').keypress(function(e) {//prevent NaN input

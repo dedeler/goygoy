@@ -60,3 +60,9 @@ input[class=input-xlarge] {
   padding-bottom: 20px;
 }
 
+#suggestion{
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
