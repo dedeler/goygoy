@@ -47,27 +47,27 @@ var companies = [
 	jobs: [
 	{
 		name: 'Software developer',
-		point: 5
+		point: 11
 	},
 	{
 		name: 'Yazılım geliştirici',
-		point: 5
+		point: 11
 	},
 	{
 		name: 'Yazılım mühendisi',
-		point: 5
+		point: 11
 	},
 	{
 		name: 'Software architect',
-		point: 10
+		point: 16
 	},
 	{
 		name: 'Yazılım mimarı',
-		point: 10
+		point: 16
 	},
 	{
 		name: 'Analist',
-		point: 13
+		point: 17
 	},
 	{
 		name: 'Sistem yöneticisi',

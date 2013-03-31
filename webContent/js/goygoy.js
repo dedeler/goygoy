@@ -44,6 +44,7 @@ $(function() {
 
     $('#company').typeahead({
       source: companyNames,
+      minLength: 0,
       updater: function(item) {
         createJobInput();
 
@@ -62,7 +63,8 @@ $(function() {
         });
 
         $('#jobInputContainer input').typeahead({
-          source: jobNames
+          source: jobNames,
+          minLength: 0
         });
         return item;
       }
