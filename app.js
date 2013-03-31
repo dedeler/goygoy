@@ -2,9 +2,13 @@ properties = require("./properties");// Should be the first, ensure that it is a
 var restify = require("restify");
 var defaultHandlers = require('./defaultHandlers');
 var handlers = require('./handlers');
+var mongoose = require('mongoose');
+
+// Bootstrap db connection
+mongoose.connect(properties.DB_URL)
 
 /* SERVER CONFIGURATION */
-var server = restify.createServer({name: "Cevirgec_Server"});
+var server = restify.createServer({name: "Goygoy_Server"});
 server.use( restify.bodyParser({ mapParams: false }) );        //register body parser
 server.use(restify.queryParser({ mapParams: true }));          //register query parser
 // server.use( defaultHandlers.authenticationFilter );            //register authentication filter
