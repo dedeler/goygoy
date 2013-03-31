@@ -61,7 +61,7 @@ input[class=input-xlarge] {
 }
 
 #suggestion{
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 15px;
   cursor: pointer;

@@ -36,6 +36,7 @@ $.fn.serializeObject = function(){
 $(function() {
 
   var companies;
+  var jobNames;
 
   $.getJSON('api/companies', function(response){
     companies = response.data;
@@ -48,13 +49,15 @@ $(function() {
 
         if(item.trim() == ""){
           $('#jobInputContainer input').attr('readonly', 'true');
+          $('#jobInputContainer input').attr('disabled', 'true');
         }
         else{
-          $('#jobInputContainer input').removeAttr('readonly'); 
+          $('#jobInputContainer input').removeAttr('readonly');
+          $('#jobInputContainer input').removeAttr('disabled');
         }
 
         var jobs = companies[item];
-        var jobNames = $.map(jobs, function(job, i) {
+        jobNames = $.map(jobs, function(job, i) {
           return job.name;
         });
 
@@ -72,6 +75,8 @@ $(function() {
     if($(this).val().trim() == ""){
       $('#job').val('').attr('readonly', 'true');
       $('#year').val('').attr('readonly', 'true');
+      $('#job').attr('disabled', 'true');
+      $('#year').attr('disabled', 'true');
     }
   });
 
@@ -97,7 +102,10 @@ $(function() {
     var data = $('form').serializeObject();
 
     //validation
-    if(data.company.trim() == "" || data.job.trim() == "" || data.year.trim() == "" || !isFinite(data.year) || data.year < 0){
+    if( !data.hasOwnProperty('company') || !data.hasOwnProperty('job') || !data.hasOwnProperty('year')||
+        data.company.trim() == "" || data.job.trim() == "" || data.year.trim() == "" || 
+        !isFinite(data.year) || data.year < 0)
+    {
       $('#validationErrorModal').modal('show');
       return;
     }
@@ -133,28 +141,45 @@ $(function() {
     return false;
   });//end of submit click
 
-$('#back').click(function() {
-  $('input').val('');
-  $('#resultContent').hide();
-  $('#mainContent').show();
-});
-
-$('#validationErrorModal').on('hidden', function () {
-  $('#submit').button('reset');
-})
-
-function createJobInput() {
-  $('#job').remove();
-  $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly>');
-
-  $('#job').change(function() {
-    if($(this).val().trim() == ""){
-      $('#year').attr('readonly', 'true');
-    }
-    else{
-      $('#year').removeAttr('readonly'); 
-    }
+  $('#back').click(function() {
+    $('input').val('');
+    $('#resultContent').hide();
+    $('#mainContent').show();
   });
-}
+
+  $('#validationErrorModal').on('hidden', function () {
+    $('#submit').button('reset');
+  });
+
+  function createJobInput() {
+    $('#job').remove();
+    $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>');
+
+    $('#job').change(function() {
+      
+      if( jobNames.indexOf($(this).val()) > -1 ){
+        $('#year').removeAttr('readonly');
+        $('#year').removeAttr('disabled');
+      }
+      else{
+        $('#year').attr('readonly', 'true');
+        $('#year').attr('disabled', 'true');
+      }
+
+      if(checkManager($(this).val())){
+        alert("ahahahaha");
+      }
+    });
+  }
+
+  var managerJobList = ['müdür', 'direktör', 'patron', 'ortak', 'kurucu'];
+  function checkManager(jobString) {
+    for (var i = 0; i < managerJobList.length; ++i) {
+      if(jobString.toLowerCase().indexOf(managerJobList[i]) > -1){
+        return true;
+      }
+      return false;
+    }
+  }
 
 });
