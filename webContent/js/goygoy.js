@@ -26,12 +26,13 @@ $(function() {
     $('#company').typeahead({
       source: companyNames,
       updater: function(item) {
-        debugger;
+        createJobInput();
+
         if(item.trim() == ""){
-          $('#job').attr('readonly', 'true');
+          $('#jobInputContainer input').attr('readonly', 'true');
         }
         else{
-          $('#job').removeAttr('readonly'); 
+          $('#jobInputContainer input').removeAttr('readonly'); 
         }
 
         var jobs = companies[item];
@@ -39,7 +40,7 @@ $(function() {
           return job.name;
         });
 
-        $('#job').typeahead({
+        $('#jobInputContainer input').typeahead({
           source: jobNames
         });
         return item;
@@ -47,15 +48,6 @@ $(function() {
     });
 
     $('#company').removeAttr('readonly');
-  });
-
-  $('#job').change(function() {
-    if($(this).val().trim() == ""){
-      $('#year').attr('readonly', 'true');
-    }
-    else{
-      $('#year').removeAttr('readonly'); 
-    }
   });
 
   $('#year').keypress(function(e) {//prevent NaN input
@@ -114,10 +106,26 @@ $(function() {
     });
 
     return false;
-  });
+  });//end of submit click
 
-  $('#back').click(function() {
-   $('#resultContent').hide();
-   $('#mainContent').show();
- });
+$('#back').click(function() {
+  $('input').val('');
+  $('#resultContent').hide();
+  $('#mainContent').show();
+});
+
+function createJobInput() {
+  $('#job').remove();
+  $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly>');
+
+  $('#job').change(function() {
+    if($(this).val().trim() == ""){
+      $('#year').attr('readonly', 'true');
+    }
+    else{
+      $('#year').removeAttr('readonly'); 
+    }
+  });
+}
+
 });
