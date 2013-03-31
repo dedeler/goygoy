@@ -167,7 +167,7 @@ $(function() {
       }
 
       if(checkManager($(this).val())){
-        alert("ahahahaha");
+        $('#managerModal').modal('show');
       }
     });
   }
@@ -178,8 +178,8 @@ $(function() {
       if(jobString.toLowerCase().indexOf(managerJobList[i]) > -1){
         return true;
       }
-      return false;
     }
+    return false;
   }
 
 });
