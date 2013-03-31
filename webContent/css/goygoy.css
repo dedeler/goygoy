@@ -4,6 +4,10 @@ body {
   background-color: #fdfdfd;
 }
 
+a{
+  color: #809AB4;
+}
+
 legend{
   border-bottom: solid 1px #ccc;
   margin-bottom: 10px;
