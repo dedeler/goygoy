@@ -17,6 +17,7 @@ server.listen(properties.PORT, properties.IP, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
+server.get('/api/companies', handlers.companies);
 server.post('/api/goygoy', handlers.calculateGoygoy);
 // Serving static content, ensure to be the last handler
 server.get('/.*', defaultHandlers.handleStaticContent);
