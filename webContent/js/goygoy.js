@@ -131,6 +131,10 @@ $('#back').click(function() {
   $('#mainContent').show();
 });
 
+$('#validationErrorModal').on('hidden', function () {
+  $('#submit').button('reset');
+})
+
 function createJobInput() {
   $('#job').remove();
   $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly>');
