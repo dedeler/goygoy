@@ -7,6 +7,8 @@ Formül
 ------
 Hesaplama için kullanılan formül aşağıda ama Türkçesi yok :(
 
+Koddaki yeri: https://github.com/dedeler/goygoy/blob/master/handlers.js#L79
+
 Not: Logaritmalar 10 tabanında.
 
 > <p>
