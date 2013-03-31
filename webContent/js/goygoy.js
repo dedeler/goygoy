@@ -99,6 +99,7 @@ $(function() {
           $('#resultText').text(response.data.message);
           $('#resultPoint').text(response.data.point);
 
+          $('#tweet-button').attr('href', "https://twitter.com/share?hashtags=goygoycu&text="+response.data.message+"&url=http://goygoycumuyuz.biz");
           $('#resultContent').show();
         }
         else{
