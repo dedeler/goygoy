@@ -27,21 +27,21 @@
             </p>
             <form class="centered">
               <div class="controls">
-                <input class="input-xlarge" type="text" placeholder="Nerede çalışıyorsunuz" data-provide="typeahead">
+                <input class="input-xlarge" name="company" type="text" placeholder="Nerede çalışıyorsunuz" data-provide="typeahead" required>
               </div>
               <div class="controls">
               </div>
-              <input class="input-xlarge" type="text" placeholder="Hangi pozisyonda" data-provide="typeahead">
+              <input class="input-xlarge" name="job" type="text" placeholder="Hangi pozisyonda" data-provide="typeahead" required>
               <div class="controls">
-                <input class="input-xlarge" type="number" placeholder="Kaç yıldır">
+                <input class="input-xlarge" name="year" type="number" placeholder="Kaç yıldır" required>
               </div>
               <div class="controls">
-                <input type="checkbox"> Outsource/Dış kaynak
+                <input name="outsource" type="checkbox"> Outsource/Dış kaynak
                 <label class="checkbox">
                 </label>
               </div>
             </form>
-            <div class="centered"><a class="btn btn-large btn-primary" href="#">Hesapla bakalım</a></div>
+            <div class="centered"><a id="submit" class="btn btn-large btn-primary" href="#">Hesapla bakalım</a></div>
           </div>
         </div>
         <br>
@@ -79,5 +79,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.9.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/goygoy.js"></script>
   </body>
   </html>
