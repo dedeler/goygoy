@@ -1,6 +1,12 @@
 body {
   padding-top: 50px;
   padding-bottom: 40px;
+  background-color: #fdfdfd;
+}
+
+legend{
+  border-bottom: solid 1px #ccc;
+  margin-bottom: 10px;
 }
 
 .centered{
@@ -25,3 +31,28 @@ input[class=input-xlarge] {
   padding: 15px 20px;
   font-size: 1.7em;
 }
+
+.modal .btn, #resultContent .btn{
+  color: #555;
+}
+
+#resultContent{
+  display: none;
+}
+
+#shareButtons i{
+  font-size: 3em;
+  color: gray;
+  cursor: pointer;
+  padding-right: 30px;
+  line-height: 0;
+}
+
+#shareButtons a:hover{
+  color: #999;
+}
+
+#resultContent{
+  padding-bottom: 20px;
+}
+

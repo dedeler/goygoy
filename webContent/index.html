@@ -12,7 +12,11 @@
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="css/goygoy.css" rel="stylesheet">
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]>
+  <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
       <![endif]-->
@@ -25,23 +29,40 @@
             <p class="lead justified">
               Hergün işe gidip sorunu eskale etme, destek veriyor olma, toplantı set etme peşindesiniz. Peki gerçekten iş yapıyor musunuz yoksa goygoycunun önde gideni misiniz? Sizin için hesapladık.
             </p>
-            <form class="centered">
-              <div class="controls">
-                <input class="input-xlarge" name="company" type="text" placeholder="Nerede çalışıyorsunuz" data-provide="typeahead" required>
+            <div id="mainContent">
+              <form class="centered">
+                <div class="controls">
+                  <input class="input-xlarge" name="company" id="company" type="text" placeholder="Nerede çalışıyorsunuz" required readonly>
+                </div>
+                <div class="controls">
+                </div>
+                <input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly>
+                <div class="controls">
+                  <input class="input-xlarge" name="year" id="year" type="number" placeholder="Kaç yıldır" required readonly>
+                </div>
+                <div class="controls">
+                  <input name="outsource" id="outsource" type="checkbox"> Outsource/Dış kaynak
+                  <label class="checkbox">
+                  </label>
+                </div>
+              </form>
+              <div class="centered"><button id="submit" class="btn btn-large btn-primary" href="#" data-loading-text="Hesaplanıyor...">Hesapla bakalım</button></div>
+            </div>
+            <div id="resultContent">
+              <legend>Sonuç</legend>
+              <div class="well">
+                <div id="resultText"></div>
+                <div id="resultPoint"></div>
               </div>
-              <div class="controls">
+
+              <legend>Müjdeyi ver</legend>
+              <div id="shareButtons">
+                <a><i class="icon-twitter"></i></a>
+                <a><i class="icon-linkedin"></i></a>
+                <a><i class="icon-facebook"></i></a>
+                <a id="back" class="btn pull-right" href="#">Geri</a>
               </div>
-              <input class="input-xlarge" name="job" type="text" placeholder="Hangi pozisyonda" data-provide="typeahead" required>
-              <div class="controls">
-                <input class="input-xlarge" name="year" type="number" placeholder="Kaç yıldır" required>
-              </div>
-              <div class="controls">
-                <input name="outsource" type="checkbox"> Outsource/Dış kaynak
-                <label class="checkbox">
-                </label>
-              </div>
-            </form>
-            <div class="centered"><a id="submit" class="btn btn-large btn-primary" href="#">Hesapla bakalım</a></div>
+            </div>
           </div>
         </div>
         <br>
@@ -68,7 +89,6 @@
         <div id="footer" class="centered">
           <div class="pull-left">
             <img id="gnu" width="32" src="img/gnu.png">
-            <div>Bu bir özgür yazılımdır.</div>
             <div><a target="_blank" href="https://github.com/dedeler/goygoy">Kaynağı &amp; lisansı gör</a></div>
           </div>
           <span class="pull-right">Bir <a target="_blank" href="https://www.github.com/dedeler">Dedeler</a> iştirakidir © Dedeler 2013</span>
@@ -80,5 +100,14 @@
     <script src="js/jquery-1.9.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/goygoy.js"></script>
+
+    <div id="validationErrorModal" class="modal hide fade">
+      <div class="modal-body">
+        <p>3 tane alanı düzgün dolduramadın yaa, kesin goygoycusun sen!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Tamam be!</a>
+      </div>
+    </div>
   </body>
   </html>

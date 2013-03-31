@@ -39,8 +39,8 @@ module.exports = {
 
   calculateGoygoy: function(req, res, next) {
     console.log(JSON.stringify(req.body));
-    if(req.body && req.body.goygoy){
-      var goygoy = req.body.goygoy;
+    if(req.body){
+      var goygoy = req.body;
       var company = goygoy['company'];
       var job = goygoy['job'];
       var year = goygoy['year'];
@@ -69,7 +69,7 @@ module.exports = {
             success: true,
             data: {
               message: result['message'],
-              point: "toplam goygoy puaniniz:"+goygoyPoint
+              point: goygoyPoint
             }
           });
           return;
