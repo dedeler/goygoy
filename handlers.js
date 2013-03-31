@@ -76,7 +76,12 @@ module.exports = {
           }
         }
 
-        var goygoyPoint = point*year;
+        //Actual goygoy calculation based on Shadduck-Hernández's work
+        var goygoyFactor =  1 + (Math.log(point) / Math.LN10 + Math.log(year) / Math.LN10) / 2;
+        var countrySpecificFixationConstant = Math.pow( 0.45 , Math.E);//0.45 for Turkey
+        var goygoyPoint = parseFloat(Math.pow(10, goygoyFactor)) + parseFloat(countrySpecificFixationConstant);
+        goygoyPoint = goygoyPoint.toFixed(2);
+
         Goygoy.findOne({minPoint: {$lte: goygoyPoint}}, 'message', {sort: {minPoint: -1}}, function(err, result){
           if(err || result==null) {
             res.send({success: false, message: "goygoy mesaji bulunamadi"});
