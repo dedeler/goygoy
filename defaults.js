@@ -31,6 +31,10 @@ var companies = [
 			{
 				name: 'Developer',
 				point: 40
+			},
+			{
+				name: 'Analyst',
+				point: 50
 			}
 		]
 	},
@@ -40,6 +44,10 @@ var companies = [
 			{
 				name: 'Developer',
 				point: 70
+			},
+			{
+				name: 'Head Architect',
+				point: 100
 			}
 		]
 	},

@@ -3,6 +3,21 @@ require('./models/company.js');
 var mongoose = require('mongoose');
 var Company = mongoose.model('Company');
 
+function companyJobs(companies) {
+  var obj = {}
+  for (i in companies) {
+    var jobs = [];
+    for (j in companies[i]['jobs']) {
+      jobs[j] = {
+        name: companies[i]['jobs'][j]['name'],
+        point: companies[i]['jobs'][j]['point']
+      }
+    }
+    obj[companies[i]['name']] = jobs;
+  }
+  return obj;
+}
+
 module.exports = {
   companies: function(req, res, next) {
     console.log(JSON.stringify(req.body));
@@ -13,7 +28,7 @@ module.exports = {
       }
       res.send({
         success: true,
-        data: companies 
+        data: companyJobs(companies) 
       });
       return;
     });
