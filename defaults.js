@@ -27,7 +27,7 @@ Goygoy.remove({}, function(err) {
 var companies = [
 	{ 
 		name: 'Turksell',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 40
@@ -36,7 +36,7 @@ var companies = [
 	},
 	{ 
 		name: 'Vodafon',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 70
@@ -45,7 +45,7 @@ var companies = [
 	},
 	{ 
 		name: 'OSBS',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 20,
@@ -54,7 +54,7 @@ var companies = [
 	},
 	{ 
 		name: 'artistlanbu',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 50,
@@ -63,7 +63,7 @@ var companies = [
 	},
 	{ 
 		name: 'Turk Air Yollari',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 60,
@@ -72,7 +72,7 @@ var companies = [
 	},
 	{ 
 		name: 'Kartaka',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 10,
@@ -81,7 +81,7 @@ var companies = [
 	},
 	{ 
 		name: 'AVEYA',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 10,
@@ -90,7 +90,7 @@ var companies = [
 	},
 	{ 
 		name: 'Praym',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 10,
@@ -99,7 +99,7 @@ var companies = [
 	},
 	{
 		name: 'Sonsuz Loop',
-		roles: [
+		jobs: [
 			{
 				name: 'Developer',
 				point: 10,
