@@ -124,6 +124,7 @@ Company.create(companies, function (err) {
 })
 
 var goygoys = [
+	{ minPoint: 0, message: 'hele bi dur daha ne calistin ki?' },
 	{ minPoint: 15, message: 'daha cok gencsin' },
 	{ minPoint: 30, message: 'goygoycu olmak icin daha cok var' },
 	{ minPoint: 50, message: 'yas 35, goygoyun yarisi.' },
