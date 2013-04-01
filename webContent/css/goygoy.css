@@ -66,3 +66,7 @@ input[class=input-xlarge] {
   top: 15px;
   cursor: pointer;
 }
+
+#linkedinGhostButtonContainer{
+  display: none;
+}

@@ -195,4 +195,13 @@ $(function() {
     }
   });
 
+  // create a proxy click for our custom Linkedin share button.
+  // Thanks http://blog.stchur.com/2010/01/15/programmatically-clicking-a-link-in-javascript/
+  var proxyClickEvent = document.createEvent('MouseEvents');
+  proxyClickEvent.initEvent('click' ,true ,true);
+
+  $('#linkedinButton').click(function() {
+    $('#linkedinGhostButtonContainer').find('a').first()[0].dispatchEvent(proxyClickEvent);
+  });
+
 });
