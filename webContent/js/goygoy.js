@@ -125,14 +125,14 @@ $(function() {
 
           $('#resultText').text(response.data.message);
           $('#resultPoint').text(response.data.point);
-
-          $('#tweetButton').attr('href', "https://twitter.com/share?hashtags=goygoycu&text="+response.data.message+"&url=http://goygoycumuyuz.biz");
+          var textMsg = '%25' + response.data.point + ' goygoycusun.' + response.data.message;
+          $('#tweetButton').attr('href', "https://twitter.com/share?hashtags=goygoycu&text=" + textMsg + "&url=http://goygoycumuyuz.biz");
           $('#facebookButton').attr('href', "https://www.facebook.com/dialog/feed?app_id=334707233318136"+
             "&redirect_uri=http://goygoycumuyuz.biz/index.html"+
             "&name=Goygoycu%20muyuz?"+
             "&link=http://goygoycumuyuz.biz/"+
             "&picture=http://static.ddmcdn.com/gif/ebitda1.jpg"+
-            "&caption=Yüzde "+response.data.point+" oranında goygoycusunuz.&description="+response.data.message);
+            "&caption=Yüzde "+response.data.point+" oranında goygoycusun.&description="+response.data.message);
           $('#resultContent').show();
         }
         else{
