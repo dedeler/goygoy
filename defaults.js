@@ -1472,6 +1472,200 @@ var companies = [
   }
   ]
 },
+{ 
+  name: 'Trendyok',
+  jobs: [
+  {
+    name: 'Software developer',
+    point: 1.2
+  },
+  {
+    name: 'Yazılım geliştirici',
+    point: 1.2
+  },
+  {
+    name: 'Yazılım mühendisi',
+    point: 1.2
+  },
+  {
+    name: 'Software architect',
+    point: 1.7
+  },
+  {
+    name: 'Yazılım mimarı',
+    point: 1.7
+  },
+  {
+    name: 'Analist',
+    point: 3.5
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 4
+  },
+  {
+    name: 'Operasyon',
+    point: 5
+  },
+  {
+    name: 'Database admini',
+    point: 5
+  },
+  {
+    name: 'Proje yöneticisi',
+    point: 8
+  },
+  {
+    name: 'İş geliştirici',
+    point: 3
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 3
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 3
+  },
+  {
+    name: 'Genel müdür',
+    point: 7.9
+  },
+  {
+    name: 'Direktör',
+    point: 7.9
+  },
+  {
+    name: 'Koordinatör',
+    point: 7.9
+  },
+  {
+    name: 'Kurucu',
+    point: 8.7
+  },
+  {
+    name: 'Kurucu ortak',
+    point: 8.7
+  },
+  {
+    name: 'Patron',
+    point: 8.7
+  },
+  {
+    name: 'Test uzmanı',
+    point: 6.1
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6.1
+  },
+  {
+    name: 'Test müdürü',
+    point: 9.1
+  },
+  {
+    name: 'Test direktörü',
+    point: 9.1
+  }
+  ]
+},
+{ 
+  name: 'Markafonik',
+  jobs: [
+  {
+    name: 'Software developer',
+    point: 1.2
+  },
+  {
+    name: 'Yazılım geliştirici',
+    point: 1.2
+  },
+  {
+    name: 'Yazılım mühendisi',
+    point: 1.2
+  },
+  {
+    name: 'Software architect',
+    point: 1.7
+  },
+  {
+    name: 'Yazılım mimarı',
+    point: 1.7
+  },
+  {
+    name: 'Analist',
+    point: 3.5
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 4
+  },
+  {
+    name: 'Operasyon',
+    point: 5
+  },
+  {
+    name: 'Database admini',
+    point: 5
+  },
+  {
+    name: 'Proje yöneticisi',
+    point: 8
+  },
+  {
+    name: 'İş geliştirici',
+    point: 3
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 3
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 3
+  },
+  {
+    name: 'Genel müdür',
+    point: 7.9
+  },
+  {
+    name: 'Direktör',
+    point: 7.9
+  },
+  {
+    name: 'Koordinatör',
+    point: 7.9
+  },
+  {
+    name: 'Kurucu',
+    point: 8.7
+  },
+  {
+    name: 'Kurucu ortak',
+    point: 8.7
+  },
+  {
+    name: 'Patron',
+    point: 8.7
+  },
+  {
+    name: 'Test uzmanı',
+    point: 6.1
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6.1
+  },
+  {
+    name: 'Test müdürü',
+    point: 9.1
+  },
+  {
+    name: 'Test direktörü',
+    point: 9.1
+  }
+  ]
+}
 ];
 
 var goygoys = [
