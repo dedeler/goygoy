@@ -100,6 +100,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19.2
+  },
+  {
+    name: 'Test uzmanı',
+    point: 19.7
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 19.7
+  },
+  {
+    name: 'Test müdürü',
+    point: 20.2
+  },
+  {
+    name: 'Test direktörü',
+    point: 20.2
   }
   ]
 },
@@ -177,6 +193,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 19.7
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 19.7
+  },
+  {
+    name: 'Test müdürü',
+    point: 20.2
+  },
+  {
+    name: 'Test direktörü',
+    point: 20.2
   }
   ]
 },
@@ -254,6 +286,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 19.7
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 19.7
+  },
+  {
+    name: 'Test müdürü',
+    point: 20.2
+  },
+  {
+    name: 'Test direktörü',
+    point: 20.2
   }
   ]
 },
@@ -405,6 +453,22 @@ var companies = [
     name: 'Patron',
     point: 11
   },
+  {
+    name: 'Test uzmanı',
+    point: 6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
+  }
   ]
 },
 { 
@@ -478,6 +542,22 @@ var companies = [
     name: 'Patron',
     point: 10
   },
+  {
+    name: 'Test uzmanı',
+    point: 5.1
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 5.1
+  },
+  {
+    name: 'Test müdürü',
+    point: 7.7
+  },
+  {
+    name: 'Test direktörü',
+    point: 7.7
+  }
   ]
 },
 { 
@@ -559,6 +639,22 @@ var companies = [
     name: 'Patron',
     point: 7
   },
+  {
+    name: 'Test uzmanı',
+    point: 6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
+  }
   ]
 },
 { 
@@ -635,6 +731,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
   }
   ]
 },
@@ -643,80 +755,92 @@ var companies = [
   jobs: [
   {
     name: 'Software developer',
-    point: 1
+    point: 11
   },
   {
     name: 'Yazılım geliştirici',
-    point: 1
+    point: 11
   },
   {
     name: 'Yazılım mühendisi',
-    point: 1
+    point: 11
   },
   {
     name: 'Software architect',
-    point: 1
+    point: 16
   },
   {
     name: 'Yazılım mimarı',
-    point: 1
+    point: 16
   },
   {
     name: 'Analist',
-    point: 1
+    point: 17
   },
   {
     name: 'Sistem yöneticisi',
-    point: 1
+    point: 10
   },
   {
     name: 'Operasyon',
-    point: 1
+    point: 20
   },
   {
     name: 'Database admini',
-    point: 1
+    point: 17
   },
   {
     name: 'Proje yöneticisi',
-    point: 1
+    point: 21
   },
   {
     name: 'İş geliştirici',
-    point: 1
+    point: 13
   },
   {
     name: 'İnsan kaynakları',
-    point: 1
+    point: 7
   },
   {
     name: 'Müşteri ilişkileri yöneticisi',
-    point: 1
+    point: 12
   },
   {
     name: 'Genel müdür',
-    point: 1
+    point: 22
   },
   {
     name: 'Direktör',
-    point: 1
+    point: 22
   },
   {
     name: 'Koordinatör',
-    point: 1
+    point: 22
   },
   {
-    name: 'Kurucu',
-    point: 1
+    name: 'Product Manager',
+    point: 19
   },
   {
-    name: 'Kurucu ortak',
-    point: 1
+    name: 'Ürün yöneticisi',
+    point: 19
   },
   {
-    name: 'Patron',
-    point: 1
+    name: 'Test uzmanı',
+    point: 6
   },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
+  }
   ]
 },
 { 
@@ -793,6 +917,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 9.6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 9.6
+  },
+  {
+    name: 'Test müdürü',
+    point: 11.9
+  },
+  {
+    name: 'Test direktörü',
+    point: 11.9
   }
   ]
 },
@@ -801,80 +941,92 @@ var companies = [
   jobs: [
   {
     name: 'Software developer',
-    point: 1
+    point: 13
   },
   {
     name: 'Yazılım geliştirici',
-    point: 1
+    point: 13
   },
   {
     name: 'Yazılım mühendisi',
-    point: 1
+    point: 13
   },
   {
     name: 'Software architect',
-    point: 1
+    point: 16
   },
   {
     name: 'Yazılım mimarı',
-    point: 1
+    point: 16
   },
   {
     name: 'Analist',
-    point: 1
+    point: 17
   },
   {
     name: 'Sistem yöneticisi',
-    point: 1
+    point: 10
   },
   {
     name: 'Operasyon',
-    point: 1
+    point: 20
   },
   {
     name: 'Database admini',
-    point: 1
+    point: 17
   },
   {
     name: 'Proje yöneticisi',
-    point: 1
+    point: 21
   },
   {
     name: 'İş geliştirici',
-    point: 1
+    point: 13
   },
   {
     name: 'İnsan kaynakları',
-    point: 1
+    point: 7
   },
   {
     name: 'Müşteri ilişkileri yöneticisi',
-    point: 1
+    point: 12
   },
   {
     name: 'Genel müdür',
-    point: 1
+    point: 22
   },
   {
     name: 'Direktör',
-    point: 1
+    point: 22
   },
   {
     name: 'Koordinatör',
-    point: 1
+    point: 22
   },
   {
-    name: 'Kurucu',
-    point: 1
+    name: 'Product Manager',
+    point: 19
   },
   {
-    name: 'Kurucu ortak',
-    point: 1
+    name: 'Ürün yöneticisi',
+    point: 19
   },
   {
-    name: 'Patron',
-    point: 1
+    name: 'Test uzmanı',
+    point: 9.6
   },
+  {
+    name: 'Test sorumlusu',
+    point: 9.6
+  },
+  {
+    name: 'Test müdürü',
+    point: 11.9
+  },
+  {
+    name: 'Test direktörü',
+    point: 11.9
+  }
   ]
 },
 { 
@@ -951,6 +1103,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
   }
   ]
 },
@@ -1028,6 +1196,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 6
+  },
+  {
+    name: 'Test müdürü',
+    point: 9
+  },
+  {
+    name: 'Test direktörü',
+    point: 9
   }
   ]
 },
@@ -1105,6 +1289,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 19
+  },
+  {
+    name: 'Test uzmanı',
+    point: 9.6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 9.6
+  },
+  {
+    name: 'Test müdürü',
+    point: 11.9
+  },
+  {
+    name: 'Test direktörü',
+    point: 11.9
   }
   ]
 },
@@ -1253,6 +1453,22 @@ var companies = [
   {
     name: 'Ürün yöneticisi',
     point: 20
+  },
+  {
+    name: 'Test uzmanı',
+    point: 9.6
+  },
+  {
+    name: 'Test sorumlusu',
+    point: 9.6
+  },
+  {
+    name: 'Test müdürü',
+    point: 11.9
+  },
+  {
+    name: 'Test direktörü',
+    point: 11.9
   }
   ]
 },
