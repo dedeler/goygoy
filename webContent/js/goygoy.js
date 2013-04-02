@@ -180,6 +180,11 @@ $(function() {
         $('#managerModal').modal('show');
       }
     });
+
+    $('#job').popover({
+      trigger:'hover',
+      content:'Görevin/pozisyonun ne? En yakın olanı seçebilirsin. İngilizcesi ve Türkçesi aynı sonuç veriyor.'
+    });
   }
 
   var managerJobList = ['müdür', 'direktör', 'patron', 'ortak', 'kurucu'];
@@ -210,4 +215,16 @@ $(function() {
     $('#linkedinGhostButtonContainer').find('a').first()[0].dispatchEvent(proxyClickEvent);
   });
 
+  //add extra desc for inputs since some lame or old browsers can't display placeloaders
+  $('#company').popover({
+    trigger:'hover',
+    content:'Nerede çalışıyorsun? İlk harfini yazıp listede gezin.'
+  });
+
+  //popover for #job is added in createJobInput() since #job input is created dynamically
+
+  $('#year').popover({
+    trigger:'hover',
+    content:'Sadece bu pozisyondaki değil, toplam iş tecrüben.'
+  });
 });
