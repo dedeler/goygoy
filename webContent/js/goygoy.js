@@ -127,6 +127,12 @@ $(function() {
           $('#resultPoint').text(response.data.point);
 
           $('#tweetButton').attr('href', "https://twitter.com/share?hashtags=goygoycu&text="+response.data.message+"&url=http://goygoycumuyuz.biz");
+          $('#facebookButton').attr('href', "https://www.facebook.com/dialog/feed?app_id=334707233318136"+
+            "&redirect_uri=http://goygoycumuyuz.biz/index.html"+
+            "&name=Goygoycu%20muyuz?"+
+            "&link=http://goygoycumuyuz.biz/"+
+            "&picture=http://static.ddmcdn.com/gif/ebitda1.jpg"+
+            "&caption=Yüzde "+response.data.point+" oranda goygoycusunuz.&description="+response.data.message);
           $('#resultContent').show();
         }
         else{
