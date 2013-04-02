@@ -42,12 +42,21 @@
             <div id="mainContent">
               <form class="centered">
                 <div class="controls">
+                  <!--[if lt IE 10]>
+                  <label>Nerede çalışıyorsunuz</label>
+                  <![endif]-->
                   <input class="input-xlarge" name="company" id="company" type="text" placeholder="Nerede çalışıyorsunuz" required readonly autofocus>
                 </div>
                 <div id="jobInputContainer" class="controls">
+                  <!--[if lt IE 10]>
+                  <label>Hangi pozisyonda</label>
+                  <![endif]-->
                   <input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>
                 </div>
                 <div class="controls">
+                  <!--[if lt IE 10]>
+                  <label>Toplam tecrübe (yıl)</label>
+                  <![endif]-->
                   <input class="input-xlarge" name="year" id="year" type="number" placeholder="Toplam tecrübe (yıl)" required readonly disabled>
                 </div>
               </form>
