@@ -132,7 +132,7 @@ $(function() {
             "&name=Goygoycu%20muyuz?"+
             "&link=http://goygoycumuyuz.biz/"+
             "&picture=http://static.ddmcdn.com/gif/ebitda1.jpg"+
-            "&caption=Yüzde "+response.data.point+" oranda goygoycusunuz.&description="+response.data.message);
+            "&caption=Yüzde "+response.data.point+" oranında goygoycusunuz.&description="+response.data.message);
           $('#resultContent').show();
         }
         else{
