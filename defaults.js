@@ -335,7 +335,11 @@ var companies = [
     point: 0.9
   },
   {
-    name: ['aaaa', 'ccccc'],
+    name: ['Mobile developer', 'Mobil geliştirici'],
+    point: 2.1
+  },
+  {
+    name: ['Software architect','Yazılım mimarı'],
     point: 1.5
   },
   {
@@ -381,6 +385,10 @@ var companies = [
   {
     name: 'Test direktörü',
     point: 7.7
+  },
+  {
+    name: ['Grafiker', 'Grafik tasarımcısı', 'Web tasarımcısı'],
+    point: 1.4
   }
   ]
 },
@@ -1158,6 +1166,206 @@ var companies = [
   {
     name: ['Test müdürü', 'Test direktörü'],
     point: 11.9
+  }
+  ]
+},
+{ 
+  name: 'Tartı Medya',
+  jobs: [
+  {
+    name: ['Software developer', 'Yazılım geliştirici', 'Yazılım mühendisi'],
+    point: 1.2
+  },
+  {
+    name: ['Software architect','Yazılım mimarı'],
+    point: 3.1
+  },
+  {
+    name: ['Analist', 'Analiz uzmanı'],
+    point: 3
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 2
+  },
+  {
+    name: ['Proje yöneticisi','Proje Koordinatörü'],
+    point: 7
+  },
+  {
+    name: 'İş geliştirici',
+    point: 8.2
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 1
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 7.6
+  },
+  {
+    name: ['Müdür', 'Genel müdür', 'Direktör', 'Koordinatör', 'Kurucu ortak', 'Kurucu', 'Patron'],
+    point: 12
+  },
+  {
+    name: ['Test uzmanı', 'Test sorumlusu'],
+    point: 4.4
+  },
+  {
+    name: ['Grafiker', 'Grafik tasarımcısı', 'Web tasarımcısı'],
+    point: 3.3
+  }
+  ]
+},
+{ 
+  name: 'Hermeş İletim',
+  jobs: [
+  {
+    name: ['Software developer', 'Yazılım geliştirici', 'Yazılım mühendisi'],
+    point: 3.4
+  },
+  {
+    name: ['Software architect','Yazılım mimarı'],
+    point: 5.2
+  },
+  {
+    name: ['Analist', 'Analiz uzmanı'],
+    point: 4.1
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 5
+  },
+  {
+    name: ['Proje yöneticisi','Proje Koordinatörü'],
+    point: 8
+  },
+  {
+    name: 'İş geliştirici',
+    point: 11.1
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 4
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 9.1
+  },
+  {
+    name: ['Müdür', 'Genel müdür', 'Direktör', 'Koordinatör', 'Kurucu ortak', 'Kurucu', 'Patron'],
+    point: 14
+  },
+  {
+    name: ['Test uzmanı', 'Test sorumlusu'],
+    point: 6.1
+  },
+  {
+    name: ['Grafiker', 'Grafik tasarımcısı', 'Web tasarımcısı'],
+    point: 3.4
+  }
+  ]
+},
+{ 
+  name: 'Magi Lick',
+  jobs: [
+  {
+    name: ['Software developer', 'Yazılım geliştirici', 'Yazılım mühendisi'],
+    point: 5.4
+  },
+  {
+    name: ['Software architect','Yazılım mimarı'],
+    point: 7.2
+  },
+  {
+    name: ['Analist', 'Analiz uzmanı'],
+    point: 5.1
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 6.2
+  },
+  {
+    name: ['Proje yöneticisi','Proje Koordinatörü'],
+    point: 9
+  },
+  {
+    name: 'İş geliştirici',
+    point: 11.1
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 4
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 11.3
+  },
+  {
+    name: ['Müdür', 'Genel müdür', 'Direktör', 'Koordinatör', 'Kurucu ortak', 'Kurucu', 'Patron'],
+    point: 16
+  },
+  {
+    name: ['Test uzmanı', 'Test sorumlusu'],
+    point: 6.3
+  },
+  {
+    name: ['Grafiker', 'Grafik tasarımcısı', 'Web tasarımcısı'],
+    point: 4.4
+  }
+  ]
+},
+{ 
+  name: 'Forekis',
+  jobs: [
+  {
+    name: ['Software developer', 'Yazılım geliştirici', 'Yazılım mühendisi'],
+    point: 1.1
+  },
+  {
+    name: ['Mobile developer', 'Mobil geliştirici'],
+    point: 0.9
+  },
+  {
+    name: ['Software architect','Yazılım mimarı'],
+    point: 2.2
+  },
+  {
+    name: ['Analist', 'Analiz uzmanı'],
+    point: 3.1
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 3.1
+  },
+  {
+    name: ['Proje yöneticisi','Proje Koordinatörü'],
+    point: 4.9
+  },
+  {
+    name: 'İş geliştirici',
+    point: 7.1
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 2
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 7.3
+  },
+  {
+    name: ['Müdür', 'Genel müdür', 'Direktör', 'Koordinatör', 'Kurucu ortak', 'Kurucu', 'Patron'],
+    point: 8
+  },
+  {
+    name: ['Test uzmanı', 'Test sorumlusu'],
+    point: 2.3
+  },
+  {
+    name: ['Grafiker', 'Grafik tasarımcısı', 'Web tasarımcısı'],
+    point: 4.4
   }
   ]
 }
