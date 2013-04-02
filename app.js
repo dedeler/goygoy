@@ -30,6 +30,11 @@ server.use( restify.bodyParser({ mapParams: false }) );        //register body p
 server.use(restify.queryParser({ mapParams: true }));          //register query parser
 // server.use( defaultHandlers.authenticationFilter );            //register authentication filter
 
+process.on('uncaughtException', function (err) {
+  console.error(err);
+  console.log("Node NOT Exiting...");
+});
+
 server.listen(properties.PORT, properties.IP, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
