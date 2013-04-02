@@ -31,75 +31,75 @@ var companies = [
   jobs: [
   {
     name: 'Software developer',
-    point: 11
+    point: 11.2
   },
   {
     name: 'Yazılım geliştirici',
-    point: 11
+    point: 11.2
   },
   {
     name: 'Yazılım mühendisi',
-    point: 11
+    point: 11.2
   },
   {
     name: 'Software architect',
-    point: 16
+    point: 16.2
   },
   {
     name: 'Yazılım mimarı',
-    point: 16
+    point: 16.2
   },
   {
     name: 'Analist',
-    point: 17
+    point: 17.2
   },
   {
     name: 'Sistem yöneticisi',
-    point: 10
+    point: 10.2
   },
   {
     name: 'Operasyon',
-    point: 20
+    point: 20.2
   },
   {
     name: 'Database admini',
-    point: 17
+    point: 17.2
   },
   {
     name: 'Proje yöneticisi',
-    point: 21
+    point: 21.2
   },
   {
     name: 'İş geliştirici',
-    point: 13
+    point: 13.2
   },
   {
     name: 'İnsan kaynakları',
-    point: 7
+    point: 7.2
   },
   {
     name: 'Müşteri ilişkileri yöneticisi',
-    point: 12
+    point: 12.2
   },
   {
     name: 'Genel müdür',
-    point: 22
+    point: 22.2
   },
   {
     name: 'Direktör',
-    point: 22
+    point: 22.2
   },
   {
     name: 'Koordinatör',
-    point: 22
+    point: 22.2
   },
   {
     name: 'Product Manager',
-    point: 19
+    point: 19.2
   },
   {
     name: 'Ürün yöneticisi',
-    point: 19
+    point: 19.2
   }
   ]
 },
@@ -1178,7 +1178,84 @@ var companies = [
   }
   
   ]
-}
+},
+{ 
+  name: 'Accen Tur',
+  jobs: [
+  {
+    name: 'Software developer',
+    point: 12
+  },
+  {
+    name: 'Yazılım geliştirici',
+    point: 12
+  },
+  {
+    name: 'Yazılım mühendisi',
+    point: 12
+  },
+  {
+    name: 'Software architect',
+    point: 17
+  },
+  {
+    name: 'Yazılım mimarı',
+    point: 17
+  },
+  {
+    name: 'Analist',
+    point: 18
+  },
+  {
+    name: 'Sistem yöneticisi',
+    point: 11
+  },
+  {
+    name: 'Operasyon',
+    point: 21
+  },
+  {
+    name: 'Database admini',
+    point: 18
+  },
+  {
+    name: 'Proje yöneticisi',
+    point: 22
+  },
+  {
+    name: 'İş geliştirici',
+    point: 14
+  },
+  {
+    name: 'İnsan kaynakları',
+    point: 8
+  },
+  {
+    name: 'Müşteri ilişkileri yöneticisi',
+    point: 13
+  },
+  {
+    name: 'Genel müdür',
+    point: 23
+  },
+  {
+    name: 'Direktör',
+    point: 23
+  },
+  {
+    name: 'Koordinatör',
+    point: 23
+  },
+  {
+    name: 'Product Manager',
+    point: 20
+  },
+  {
+    name: 'Ürün yöneticisi',
+    point: 20
+  }
+  ]
+},
 ];
 
 var goygoys = [
