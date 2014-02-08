@@ -17,7 +17,6 @@ along with Goygoycumuyuz.biz.  If not, see <http://www.gnu.org/licenses/>.
 
 properties = require("./properties");// Should be the first, ensure that it is a global variable
 var restify = require("restify");
-var defaultHandlers = require('./defaultHandlers');
 var handlers = require('./handlers');
 var mongoose = require('mongoose');
 
@@ -28,7 +27,6 @@ mongoose.connect(properties.DB_URL)
 var server = restify.createServer({name: "Goygoy_Server"});
 server.use( restify.bodyParser({ mapParams: false }) );        //register body parser
 server.use(restify.queryParser({ mapParams: true }));          //register query parser
-// server.use( defaultHandlers.authenticationFilter );            //register authentication filter
 
 process.on('uncaughtException', function (err) {
   console.error(err);
@@ -41,5 +39,3 @@ server.listen(properties.PORT, properties.IP, function() {
 
 server.get('/api/companies', handlers.companies);
 server.post('/api/goygoy', handlers.calculateGoygoy);
-// Serving static content, ensure to be the last handler
-server.get('/.*', defaultHandlers.handleStaticContent);
