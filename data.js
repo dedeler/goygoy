@@ -1342,6 +1342,35 @@ module.exports = {
       point: 4.4
     }
     ]
+  },
+{ 
+    name: 'Atölye 15',
+    jobs: [
+    {
+      name: ['Software developer', 'Yazılım geliştirici', 'Yazılım mühendisi'],
+      point: 0.1
+    },
+    {
+      name: ['Grafiker', 'Grafik tasarımcısı'],
+      point: 0.5
+    },
+    {
+      name: 'Proje yöneticisi',
+      point: 5
+    },
+    {
+      name: 'İnsan kaynakları',
+      point: 2
+    },
+    {
+      name: 'Müşteri ilişkileri yöneticisi',
+      point: 3
+    },
+    {
+      name: ['Müdür', 'Genel müdür', 'Direktör', 'Koordinatör', 'Kurucu ortak', 'Kurucu', 'Patron'],
+      point: 7
+    }
+    ]
   }
   ]
 };
