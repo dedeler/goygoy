@@ -35,10 +35,12 @@ $.fn.serializeObject = function(){
 
 $(function() {
 
+  var API_URL = "http://78.47.61.164:3169/";
+
   var companies;
   var jobNames;
 
-  $.getJSON('api/companies', function(response){
+  $.getJSON(API_URL + 'api/companies', function(response){
     companies = response.data;
     var companyNames = Object.keys(response.data);
 
@@ -114,7 +116,7 @@ $(function() {
 
     $.ajax({
       type: 'post',
-      url: 'api/goygoy',
+      url: API_URL + 'api/goygoy',
       data: JSON.stringify(data),
       dataType: 'json',
       contentType: 'application/json',
