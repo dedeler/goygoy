@@ -40,7 +40,6 @@ $(function() {
   // populate company names
   $.getJSON(API_URL + 'api/companies', function(response){
 
-    response = JSON.parse(response);
     var companies = {};//used when retrieving `jobs` array
 
     //construct `companies` and `companyData` at once
