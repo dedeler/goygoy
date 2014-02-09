@@ -10,6 +10,7 @@
   <!-- Le styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="css/select2.css" rel="stylesheet">
   <link href="css/goygoy.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/fontello.css">
@@ -50,13 +51,13 @@
                   <!--[if lt IE 10]>
                   <label>Nerede çalışıyorsunuz</label>
                   <![endif]-->
-                  <input class="input-xlarge" name="company" id="company" type="text" placeholder="Nerede çalışıyorsunuz" required readonly autofocus>
+                  <input class="input-xlarge" name="company" id="company" placeholder="Nerede çalışıyorsunuz" data-placeholder="Nerede çalışıyorsunuz" required disabled />
                 </div>
                 <div id="jobInputContainer" class="controls">
                   <!--[if lt IE 10]>
                   <label>Hangi pozisyonda</label>
                   <![endif]-->
-                  <input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>
+                  <input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required disabled />
                 </div>
                 <div class="controls">
                   <!--[if lt IE 10]>
@@ -123,6 +124,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.9.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/goygoy.js"></script>
 
     <div id="validationErrorModal" class="modal hide fade">

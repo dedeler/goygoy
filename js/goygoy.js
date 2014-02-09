@@ -37,66 +37,95 @@ $(function() {
 
   var API_URL = "http://78.47.61.164:3169/";
 
-  var companies;
-  var jobNames;
-
+  // populate company names
   $.getJSON(API_URL + 'api/companies', function(response){
-    companies = response.data;
-    var companyNames = Object.keys(response.data);
 
-    $('#company').typeahead({
-      source: companyNames,
-      minLength: 0,
-      updater: function(item) {
-        createJobInput();
+    response = "{\"success\":true,\"data\":[{\"name\":\"Turksell\",\"jobs\":[{\"name\":\"Müdür\"},{\"name\":\"Operasyon\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Database admini\"},{\"name\":\"Oracle admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"Vodafonn\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Database admini\"},{\"name\":\"Oracle admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"AVEYA\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Database admini\"},{\"name\":\"Oracle admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"Aktif Tank\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Garantili Teknoloji\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Ak Tank\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Huawey\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Sonsuz Loop\",\"jobs\":[{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"}]},{\"name\":\"ArtistlanbuPr\",\"jobs\":[{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Topluluk yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"}]},{\"name\":\"Accen Tur\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"AtÃ¶lye 15\",\"jobs\":[{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"}]},{\"name\":\"Kartaka\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"}]},{\"name\":\"Praym Teknikoloji\",\"jobs\":[{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Database admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"OBÅžÅž\",\"jobs\":[{\"name\":\"Analist\"},{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Mobile developer\"},{\"name\":\"Mobil geliÅŸtirici\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"Sahibinben\",\"jobs\":[{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"}]},{\"name\":\"TÃ¼rk Telefon\",\"jobs\":[{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"}]},{\"name\":\"TÃ¼rk Hava YolladÄ±\",\"jobs\":[{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"}]},{\"name\":\"YapÄ±kremit BankasÄ±\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Trendyok\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"Markafonik\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Operasyon\"},{\"name\":\"Database admini\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Product Manager\"},{\"name\":\"ÃœrÃ¼n yÃ¶neticisi\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Test mÃ¼dÃ¼rÃ¼\"},{\"name\":\"Test direktÃ¶rÃ¼\"}]},{\"name\":\"TartÄ± Medya\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"HermeÅŸ Ä°letim\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"Magi Lick\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]},{\"name\":\"Forekis\",\"jobs\":[{\"name\":\"Sistem yÃ¶neticisi\"},{\"name\":\"Ä°ÅŸ geliÅŸtirici\"},{\"name\":\"Ä°nsan kaynaklarÄ±\"},{\"name\":\"MÃ¼ÅŸteri iliÅŸkileri yÃ¶neticisi\"},{\"name\":\"Software developer\"},{\"name\":\"YazÄ±lÄ±m geliÅŸtirici\"},{\"name\":\"YazÄ±lÄ±m mÃ¼hendisi\"},{\"name\":\"Mobile developer\"},{\"name\":\"Mobil geliÅŸtirici\"},{\"name\":\"Software architect\"},{\"name\":\"YazÄ±lÄ±m mimarÄ±\"},{\"name\":\"Analist\"},{\"name\":\"Analiz uzmanÄ±\"},{\"name\":\"Proje yÃ¶neticisi\"},{\"name\":\"Proje KoordinatÃ¶rÃ¼\"},{\"name\":\"MÃ¼dÃ¼r\"},{\"name\":\"Genel mÃ¼dÃ¼r\"},{\"name\":\"DirektÃ¶r\"},{\"name\":\"KoordinatÃ¶r\"},{\"name\":\"Kurucu ortak\"},{\"name\":\"Kurucu\"},{\"name\":\"Patron\"},{\"name\":\"Test uzmanÄ±\"},{\"name\":\"Test sorumlusu\"},{\"name\":\"Grafiker\"},{\"name\":\"Grafik tasarÄ±mcÄ±sÄ±\"},{\"name\":\"Web tasarÄ±mcÄ±sÄ±\"}]}]}";
+    response = JSON.parse(response);
+    var companies = {};//used when retrieving `jobs` array
 
-        if(item.trim() == ""){
-          $('#jobInputContainer input').attr('readonly', 'true');
-          $('#jobInputContainer input').attr('disabled', 'true');
-        }
-        else{
-          $('#jobInputContainer input').removeAttr('readonly');
-          $('#jobInputContainer input').removeAttr('disabled');
-        }
+    //construct `companies` and `companyData` at once
+    var companyData = response.data.map(function(company){
+      companies[company.name] = company.jobs;
 
-        var jobs = companies[item];
-        jobNames = $.map(jobs, function(job, i) {
-          return job.name;
-        });
-
-        $('#jobInputContainer input').typeahead({
-          source: jobNames,
-          minLength: 0
-        });
-        return item;
-      }
+      return {
+        id: company.name,
+        text: company.name}
     });
 
-    $('#company').removeAttr('readonly');
+    $('#company').select2({
+      data: companyData,
+      allowClear: false,
+      formatNoMatches: function(term) {
+        return '<strong>' + term + '</strong> diye bi şirket yok ama istersen ekleyebiliriz, yukarı bak ↗';
+      }
+    })
+    .select2('enable', true)
+    
+    .on('change', function(item) {
+      newSelectionReset();
+
+      var jobs = companies[ $(this).val() ];//jobs array
+      var jobData = $.map(jobs, function(job){
+        return {
+          id: job.name,
+          text: job.name}
+      });
+
+      $('#job').select2({
+        data: jobData,
+        allowClear: false,
+      formatNoMatches: function(term) {
+        return '<strong>' + term + '</strong> diye bi pozisyon yok ama istersen onu da ekleyebiliriz, yukarı bak ↗';
+      }
+      })
+      .select2('enable', true)
+
+      .on('change', function() {
+        $('#year').removeAttr('readonly');
+        $('#year').removeAttr('disabled');
+
+        if(checkManager($(this).val())){
+          $('#managerModal').modal('show');
+        }
+      });
+
+    });
+
   });
 
-  $('#company').keyup(function() {
-    if($(this).val().trim() == ""){
-      $('#job').val('').attr('readonly', 'true');
-      $('#year').val('').attr('readonly', 'true');
-      $('#job').attr('disabled', 'true');
-      $('#year').attr('disabled', 'true');
-    }
-  });
+  function newSelectionReset() {
+    $('#job').select2('enable', false).select2("val", "");
+    $('#year').val('').attr('readonly', 'true');
+    $('#year').attr('disabled', 'true');
+  };
 
-  $('#year').keypress(function(e) {//prevent NaN input
-    //Thanks: http://stackoverflow.com/a/3764841/878361
-    var a = [];
+  function reset() {
+    $('#company').select2('enable', true).select2("val", "");
+    $('#job').select2('enable', false).select2("val", "");
+    $('#year').val('').attr('readonly', 'true');
+    $('#year').attr('disabled', 'true');
+    $('#resultContent').hide();
+    $('#mainContent').show();
+  };
+
+  $('#back').click(reset);
+
+  //prevent NaN input
+  //Thanks: http://stackoverflow.com/a/3764841/878361
+  var a = [];
+
+  for (var i = 48; i < 58; i++){
+    a.push(i);
+  }
+
+  $('#year').keypress(function(e) {
     var k = e.which;
-
-    for (var i = 48; i < 58; i++){
-      a.push(i);
-    }
-
     if (!(a.indexOf(k)>=0)){
       e.preventDefault();
     }
   });
+  //end of prevent NaN input
 
   $('#submit').click(function(e) {
 
@@ -152,42 +181,9 @@ $(function() {
     return false;
   });//end of submit click
 
-  $('#back').click(function() {
-    $('input').val('').attr('readonly', 'true').attr('disabled', 'true');
-    $('#company').removeAttr('readonly').removeAttr('disabled');
-    $('#resultContent').hide();
-    $('#mainContent').show();
-  });
-
   $('#validationErrorModal').on('hidden', function () {
     $('#submit').button('reset');
   });
-
-  function createJobInput() {
-    $('#job').remove();
-    $('#jobInputContainer').html('<input class="input-xlarge" name="job" id="job" type="text" placeholder="Hangi pozisyonda" required readonly disabled>');
-
-    $('#job').change(function() {
-
-      if( jobNames.indexOf($(this).val()) > -1 ){
-        $('#year').removeAttr('readonly');
-        $('#year').removeAttr('disabled');
-      }
-      else{
-        $('#year').attr('readonly', 'true');
-        $('#year').attr('disabled', 'true');
-      }
-
-      if(checkManager($(this).val())){
-        $('#managerModal').modal('show');
-      }
-    });
-
-    $('#job').popover({
-      trigger:'hover',
-      content:'Görevin/pozisyonun ne? En yakın olanı seçebilirsin. İngilizcesi ve Türkçesi aynı sonuç veriyor.'
-    });
-  }
 
   var managerJobList = ['müdür', 'direktör', 'patron', 'ortak', 'kurucu'];
   function checkManager(jobString) {
@@ -199,6 +195,7 @@ $(function() {
     return false;
   }
 
+  // submit on enter key
   $("form #year").keypress(function (e) {
     if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
       $('button[type=submit]').click();
@@ -217,16 +214,4 @@ $(function() {
     $('#linkedinGhostButtonContainer').find('a').first()[0].dispatchEvent(proxyClickEvent);
   });
 
-  //add extra desc for inputs since some lame or old browsers can't display placeloaders
-  $('#company').popover({
-    trigger:'hover',
-    content:'Nerede çalışıyorsun? İlk harfini yazıp listede gezin.'
-  });
-
-  //popover for #job is added in createJobInput() since #job input is created dynamically
-
-  $('#year').popover({
-    trigger:'hover',
-    content:'Sadece bu pozisyondaki değil, toplam iş tecrüben.'
-  });
 });
