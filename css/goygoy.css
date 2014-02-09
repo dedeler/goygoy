@@ -53,6 +53,10 @@ input[class=input-xlarge] {
   line-height: 0;
 }
 
+#shareButtons i:hover{
+  color: #ccc;
+}
+
 #shareButtons a:hover{
   color: #999;
 }
